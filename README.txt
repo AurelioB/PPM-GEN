@@ -1,9 +1,4 @@
 
-EQUIPO:
-	AURELIO BERNAL RAMÍREZ
-	CRISTIAN SIMÓN RODRÍGUEZ RAMÍREZ
-	CRISTINA ÁLVAREZ GODOY
-	
 INSTRUCCIONES: COMPILACIÓN
 	
 	Si se desea compilar el programa, se deben ejecutar las siguientes instrucciones desde terminal:
