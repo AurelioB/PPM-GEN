@@ -11,11 +11,13 @@ INSTRUCCIONES: COMPILACIÓN
 	Lo único que se debe verificar es la bandera -ll que se pasa a gcc, ya que puede variar dependiendo del sistema operativo y de la instalación de Flex. En algunos casos es necesario utilizar -lfl
 	
 INSTRUCCIONES: USO
-
-	El programa al ser ejecutado intenta leer un archivo llamado "input" en el mismo directorio.
+	
+	El programa recibe como máximo 2 argumentos, siendo el primero el nombre del archivo de entrata y el segundo, el de salida.
+	Si no se especifica el archivo de salida, se escribirá a "output.ppm" por defecto.
+	Si tampoco se especifica el primer argumento, intentará leer un archivo llamado "input.txt" en el mismo directorio.
 	Este archivo es procesado y evaluado de acuerdo a la gramática indicada en el documento de la práctica.
 	Si se encuentra algún error en el proceso se detendrá la ejecución del programa y se indicará la linea y el tipo de error encontrado.
-	Si no se encuentra ningún error en el archivo de entrada, se generará un archivo "output.ppm" con el resultado del procesamiento semántico del archivo de entrada.
+	Si no se encuentra ningún error en el archivo de entrada, se genera el archivo de salida.
 	
 CONSIDERACIONES:
 
