@@ -28,9 +28,17 @@ void initialize(int w, int h) {
     height = h;
     int x, y;
     ppmCanvas = malloc(sizeof(Pixel*) * w);
+    if(ppmCanvas == NULL) {
+        printf(" ** MEMORY ERROR: couldn't allocate %lo bytes", sizeof(Pixel*) * w );
+        exit(-1);
+    }
     setColor(255,255,255);
     for(x = 0; x < w; x++) {
         ppmCanvas[x] = malloc(sizeof(Pixel) * h);
+        if(ppmCanvas[x] == NULL) {
+            printf(" ** MEMORY ERROR: couldn't allocate %lo bytes", sizeof(Pixel*) * h );
+            exit(-1);
+        }
         for(y = 0; y < h; y++) {
             drawPoint(x,y);
         }
@@ -49,8 +57,6 @@ void drawPoint(int x, int y) {
     if(x >= width || y >= height || x < 0 || y < 0)
         return;
     
-    ppmCanvas[x][y].r = ppmColor.r;
-    ppmCanvas[x][y].g = ppmColor.g;
     ppmCanvas[x][y].b = ppmColor.b;
 }
 
