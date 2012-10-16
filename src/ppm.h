@@ -58,6 +58,8 @@ void drawPoint(int x, int y) {
         return;
     
     ppmCanvas[x][y].b = ppmColor.b;
+    //  Assign current color to the specified coordinate
+    ppmCanvas[x][y] = ppmColor;
 }
 
 void drawRectangle(int x0, int y0, int x1, int y1) {
