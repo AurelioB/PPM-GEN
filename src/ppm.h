@@ -54,23 +54,22 @@ void setColor(int r, int g, int b) {
 
 void drawPoint(int x, int y) {
     
+    //  If the point is out of the canvas, ignore it
     if(x >= width || y >= height || x < 0 || y < 0)
         return;
-    
-    ppmCanvas[x][y].b = ppmColor.b;
     //  Assign current color to the specified coordinate
     ppmCanvas[x][y] = ppmColor;
 }
 
 void drawRectangle(int x0, int y0, int x1, int y1) {
     
-    /* Empty Rectangle */
+    //  Empty Rectangle
     drawLine(x0, y0, x1, y0);
     drawLine(x0, y1, x1, y1);
     drawLine(x0, y0, x0, y1);
     drawLine(x1, y0, x1, y1);
     
-    /* Filled Rectangle */
+    //  Filled Rectangle
     int x;
     for(x = x0; x <= x1; x++) {
         drawLine(x, y0, x, y1);
