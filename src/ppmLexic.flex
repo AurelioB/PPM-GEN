@@ -5,19 +5,17 @@
 	int lnum = 1;
 %}
 
-DIGITO	[0-9]
-ENTERO	{DIGITO}+
+DIGITO				[0-9]
+ENTERO				{DIGITO}+
 
+ID					{LETRA}({LETRA}|{DIGITO})*
 
-LETRA	[a-zA-Z]
-ID	{LETRA}({LETRA}|{DIGITO})*
+REAL				{ENTERO}\.{ENTERO}
 
-REAL	{ENTERO}\.{ENTERO}
+BLANCO				[ \t]
+BLANCOS				{BLANCO}+
 
-BLANCO	[ \t]
-BLANCOS	{BLANCO}+
-
-NUEVA_LINEA	\n
+NUEVA_LINEA			\n
 
 %%
 
